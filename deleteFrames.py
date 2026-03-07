@@ -1,7 +1,7 @@
 import os
 import logging
 
-MAX_IMAGES = 2000
+MAX_IMAGES = 1000
 EXT = ".jpeg"
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
