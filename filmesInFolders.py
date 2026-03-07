@@ -4,7 +4,7 @@ import re
 
 # Folder containing the files
 base_dir = os.path.dirname(os.path.abspath(__file__))
-target_folder = os.path.join(base_dir, "videos")
+target_folder = os.path.join(base_dir, "moderneFilme")
 
 for item in os.listdir(target_folder):
     item_path = os.path.join(target_folder, item)
