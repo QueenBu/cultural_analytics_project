@@ -7,7 +7,7 @@ MAX_WORKERS = 4
 
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
-log_file = os.path.join(base_dir, "../ffmpeg_keyframe_extract.log")
+log_file = os.path.join(base_dir, "../../ffmpeg_keyframe_extract.log")
 
 logging.basicConfig(
     filename=log_file,
