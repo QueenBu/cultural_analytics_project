@@ -11,7 +11,8 @@ replacements = {
     "Ä": "Ae",
     "Ö": "Oe",
     "Ü": "Ue",
-    "ß": "ss"
+    "ß": "ss",
+    "é": "e"
 }
 
 for filename in os.listdir(folder):
