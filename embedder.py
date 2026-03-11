@@ -25,7 +25,10 @@ for file in os.listdir(actors_dir):
         print("Skipping:", file)
         continue
 
-    actor_name = file.split("-")[0]   # firstname_lastname
+    #firstname_lastname-w.png
+    #firstname_lastname-m.png
+    name_part = file.split(".")[0]
+    actor_name, gender = name_part.split("-")
 
     (h, w) = image.shape[:2]
 
@@ -66,7 +69,10 @@ for file in os.listdir(actors_dir):
     embedder.setInput(face_blob)
     vec = embedder.forward().flatten()
 
-    database[actor_name] = vec
+    database[actor_name] = {
+        "gender": gender,
+        "embedding": vec
+    }
 
 print("Actors loaded:", len(database))
 

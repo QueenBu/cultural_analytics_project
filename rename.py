@@ -1,6 +1,5 @@
 import os
 
-# Folder containing your PNG files
 folder = "NS_actors"
 
 # Mapping of characters to replace
