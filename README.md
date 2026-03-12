@@ -19,7 +19,7 @@ docker run --rm -v "${PWD}:/app" face-matcher python detectFaces.py --movies-fol
 for cmd.exe replace `"${PWD}:/app"` with `"%cd%:/app"`
 
 ```
-docker run --rm -v "${PWD}:/app" face-matcher python keyframesModern.py --film-folder data/moderneFilme/MoonriseKingdom
-ThreeBillboardsOutsideEbbingMissouri
+docker run --rm -v "${PWD}:/app" face-matcher python keyframesModern.py --film-folder data/moderneFilme/ThreeBillboardsOutsideEbbingMissouri
+
 docker run --rm -v "${PWD}:/app" face-matcher python keyframesModern.py --film-folder data/moderneFilme
 ```
