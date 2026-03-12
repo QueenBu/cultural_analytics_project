@@ -76,3 +76,4 @@ with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
 
 logging.info("Script finished")
 print("All tasks complete.")
+

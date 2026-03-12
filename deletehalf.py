@@ -2,7 +2,7 @@ import os
 
 # Folder containing the images
 base_dir = os.path.dirname(os.path.abspath(__file__))
-folder = os.path.join(base_dir, "BelAmiia")
+folder = os.path.join(base_dir, "!Interstellar")
 
 # Image extensions to consider
 image_extensions = (".jpg", ".jpeg", ".png", ".bmp", ".gif", ".webp")
