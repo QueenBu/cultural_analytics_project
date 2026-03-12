@@ -8,7 +8,7 @@ movie_name = "DergroeSchattenHeinrichGeorge"
 path = r"C:\Users\bianc\Videos\videos\NS Filme\DergroeSchattenHeinrichGeorge"
 keyframes_dir = path
 
-# ---------- load actor database ----------
+# ---------- load actors database ----------
 with open("actor_db.pkl", "rb") as f:
     database = pickle.load(f)
 

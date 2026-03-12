@@ -42,7 +42,7 @@ def process_single_movie(args):
             for face_enc in face_encs:
                 distances = []
 
-                # compute distance to every actor
+                # compute distance to every actors
                 for actor in actor_data.values():
                     dist = face_recognition.face_distance([actor["encoding"]], face_enc)[0]
                     distances.append((dist, actor))
