@@ -4,9 +4,9 @@ import pickle
 import face_recognition
 
 CACHE_FILE = "NS_actors_cache.pkl"
-KEYFRAME_DIR = "data/NS_Filme/DieFeuerzangenbowleDeutscheFilmehdia"
+KEYFRAME_DIR = "data/NS_Filme/DieUnheimlicheWandlungdesAlexRoscherOscarSima"
 
-MOVIE_NAME = "DieFeuerzangenbowle"
+MOVIE_NAME = "DieUnheimlicheWandlungdesAlexRoscherOscarSima"
 OUTPUT_CSV = f"{MOVIE_NAME}.csv"
 
 
@@ -53,7 +53,7 @@ def process_movie():
 
                 # write only those below the stricter threshold
                 for dist, actor in top5:
-                    if dist < 0.40:  # stricter threshold
+                    if dist < 0.45:  # stricter threshold
                         writer.writerow([frame_file, actor["name"], actor["gender"]])
 
 if __name__ == "__main__":

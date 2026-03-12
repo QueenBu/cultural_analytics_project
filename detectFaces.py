@@ -55,7 +55,7 @@ def process_single_movie(args):
 
                 # write only those below the stricter threshold
                 for dist, actor in top5:
-                    if dist < 0.40:  # stricter threshold
+                    if dist < 0.45:  # stricter threshold
                         writer.writerow([frame_file, actor["name"], actor["gender"]])
 
     print(f"Finished: {movie_name}")
