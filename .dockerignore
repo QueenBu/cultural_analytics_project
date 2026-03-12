@@ -1,0 +1,16 @@
+movies/
+actors/
+data/
+models/
+*.jpg
+*.jpeg
+*.png
+*.mp4
+*.mov
+*.avi
+*.pkl
+__pycache__/
+*.csv
+*.log
+*.tmp
+.git/
