@@ -105,7 +105,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--film-folder", required=True,
                         help="Path to a single film folder OR a parent folder containing many films")
-    parser.add_argument("--threshold", type=float, default=0.50)
+    parser.add_argument("--threshold", type=float, default=0.40)
     parser.add_argument("--workers", type=int, default=0,
                         help="Number of parallel processes (0 = use all cores)")
     args = parser.parse_args()

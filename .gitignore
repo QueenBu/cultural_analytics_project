@@ -1,8 +1,8 @@
 **.mp4
 *.idea
-/data/combined.csv
 /data/only_faces.csv
 /data/results.py
 /data/results_NS_films.csv
 /data/results_modern_films.csv
 /data/results_NS_movies.csv
+
