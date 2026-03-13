@@ -5,9 +5,9 @@ import face_recognition
 
 def parse_actor_filename(filename):
     base = os.path.splitext(filename)[0]
-    if base.endswith("-F"):
+    if base.endswith("-w"):
         return base[:-2], "F"
-    elif base.endswith("-M"):
+    elif base.endswith("-m"):
         return base[:-2], "M"
     return base, "unknown"
 

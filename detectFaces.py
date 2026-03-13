@@ -27,7 +27,15 @@ def process_single_movie(args):
 
     with open(output_csv, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(["frame_name", "actor_name", "gender"])
+        writer.writerow([
+            "frame_name",
+            "actor_name",
+            "gender",
+            "top",
+            "right",
+            "bottom",
+            "left"
+        ])
 
         for frame_file in sorted(os.listdir(movie_folder)):
             if not frame_file.lower().endswith((".png", ".jpg", ".jpeg")):
@@ -39,27 +47,34 @@ def process_single_movie(args):
             face_locations = face_recognition.face_locations(frame)
             face_encs = face_recognition.face_encodings(frame, face_locations)
 
-            for face_enc in face_encs:
-                distances = []
+            # iterate over all faces in this frame
+            for (top, right, bottom, left), face_enc in zip(face_locations, face_encs):
 
-                # compute distance to every actors
+                distances = []
                 for actor in actor_data.values():
                     dist = face_recognition.face_distance([actor["encoding"]], face_enc)[0]
                     distances.append((dist, actor))
 
-                # sort by distance (closest first)
+                # sort by distance
                 distances.sort(key=lambda x: x[0])
 
-                # keep only the best 5 matches
-                top5 = distances[:5]
+                # best match only
+                best_dist, best_actor = distances[0]
 
-                # write only those below the stricter threshold
-                for dist, actor in top5:
-                    if dist < 0.45:  # stricter threshold
-                        writer.writerow([frame_file, actor["name"], actor["gender"]])
+                if best_dist < 0.45:
+                    writer.writerow([
+                        frame_file,
+                        best_actor["name"],
+                        best_actor["gender"],
+                        top,
+                        right,
+                        bottom,
+                        left
+                    ])
 
     print(f"Finished: {movie_name}")
     return movie_name
+
 
 
 def main():

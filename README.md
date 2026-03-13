@@ -13,13 +13,13 @@ docker run --rm -v "${PWD}:/app" face-matcher python start.py
 
 docker run --rm -v "${PWD}:/app" face-matcher python main.py
 
-docker run --rm -v "${PWD}:/app" face-matcher python detectFaces.py --movies-folder data/NS_Filme
+docker run --rm -v "${PWD}:/app" face-matcher python detectFaces.py --movies-folder data/NS_Filme/temp
 ```
 
 for cmd.exe replace `"${PWD}:/app"` with `"%cd%:/app"`
 
 ```
-docker run --rm -v "${PWD}:/app" face-matcher python keyframesModern.py --film-folder data/moderneFilme/ThreeBillboardsOutsideEbbingMissouri
+docker run --rm -v "${PWD}:/app" face-matcher python keyframesModern.py --film-folder data/NS_Filme/DieUnheimlicheWandlungdesAlexRoscherOscarSima
 
-docker run --rm -v "${PWD}:/app" face-matcher python keyframesModern.py --film-folder data/moderneFilme
+docker run --rm -v "${PWD}:/app" face-matcher python keyframesModern.py --film-folder data/NS_Filme
 ```
