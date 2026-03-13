@@ -20,6 +20,6 @@ df["diff"] = (df["pos0"] - df["left"]).abs()
 # pro frame_name + position die Zeile mit minimaler diff behalten
 df_clean = df.loc[df.groupby(["frame_name", "position"])["diff"].idxmin()].reset_index(drop=True)
 
-df_clean.to_csv("yourfile_clean.csv", sep=";", index=False)
+df_clean.to_csv("NS_no_douplicates.csv", sep=";", index=False)
 
 
