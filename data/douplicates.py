@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 # CSV einlesen
-df = pd.read_csv("results_NS_movies_clean.csv", sep=";")
+df = pd.read_csv("results_modern_movies_clean.csv", sep=";")
 
 # --- helper: extract numbers from position string ---
 def extract_numbers(s):
@@ -57,6 +57,6 @@ while i < n:
 
 df_final = pd.DataFrame(keep_rows).reset_index(drop=True)
 
-df_final.to_csv("NS_no_douplicates.csv", sep=";", index=False)
+df_final.to_csv("modern_no_douplicates.csv", sep=";", index=False)
 
 
